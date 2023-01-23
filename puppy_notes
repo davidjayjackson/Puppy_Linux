@@ -1,0 +1,28 @@
+
+#### (1) One question is how do I enable cut-and-paste to and from the Urxvt terminal?
+
+```
+
+Copy- left click hold and highlight
+
+Paste- middle button click
+
+Also works to copy from terminal and paste to other programs.
+
+Also if you use copy method that comes with other programs you can paste in terminal by middle mouse button click.
+
+If you do not have a middle mouse button.
+
+Clicking the left and right buttons, at the same time, will have same effect as middle mouse button.
+
+shift+insert will also work to paste.
+
+Note:
+copy stuff is stored in the clipboard.
+The last thing copied is what is pasted.
+You can click on the clipboard manager icon on the right side of the desktop tray.
+It will have a list of all items copied, during this session of Puppy operation.
+You can select one of them from this list.
+That will now be what is pasted.
+
+```
