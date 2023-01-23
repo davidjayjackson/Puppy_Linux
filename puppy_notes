@@ -2,8 +2,9 @@
 #### (1) One question is how do I enable cut-and-paste to and from the Urxvt terminal?
 
 ```
+@ Wizard, You will find good instructions here: https://forum.puppylinux.com/viewtopic.php?t=5750
 
-Copy- left click hold and highlight
+@BigPup, Copy- left click hold and highlight
 
 Paste- middle button click
 
@@ -24,5 +25,25 @@ You can click on the clipboard manager icon on the right side of the desktop tra
 It will have a list of all items copied, during this session of Puppy operation.
 You can select one of them from this list.
 That will now be what is pasted.
+-----
+(1A) If you want to cut something so it is no longer at a specific place in whatever is displayed.
+You want to now place it in a different location.
+
+This is a basic terminal.
+
+What I do is copy what it is I want to cut.
+Paste it to new location.
+Go back to original and delete it.
+
+Someone may know a different way, but I have found that gives me a good backup of the original, till I am sure I want to delete it from where it was.
+Plus make sure it pasted correctly to where I wanted it.
+
+============ LX Terminal ====================
+(1B) mikeslr , As my fingers are not all that agile, I install *LxTerminal* if it's not already present. I then use Menu>Setup>Default Application Chooser to set LxTerminal as the default terminal.
+LxTerminal's Menu bar provides Edit>Copy Edit>paste, used in conjunction with high-lighting as under geany/text-editors, and will copy/paste to and from those.
+That almost works completely. LxTerminal will open from menus and launchers, and if I Right-Click an empty space and select Window>terminal here. But if I Right-Click a script or executable and select 'Run in terminal' some other terminal opens.
+There's probably a way to fix that, But I only use 'Run in terminal' when trying to find out if something will run at all, or obtain a terminal display of what's going wrong if it doesn't.
+============================================
+
 
 ```
