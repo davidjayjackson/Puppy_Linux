@@ -1,5 +1,5 @@
 ```
-Here is an example of how you could use the awk command to count the number of cases per day in a file called "data.txt":
+###Here is an example of how you could use the awk command to count the number of cases per day in a file called "data.txt":
 Explanation:
 
 {count[$1]++}: The script will create an associative array called "count" and increment the value of the first field (date) each time it appears in the file.
@@ -8,15 +8,31 @@ Note: This is just a general example, you might have to adjust your command base
 
 awk '{count[$1]++} END {for (date in count) print date, count[date]}' data.txt
 
-The file contains two columns date and number of cases for that day:
+#### The file contains two columns date and number of cases for that day:
 
-Explanation:
+* Explanation:
 
 {count[$1] += $2}: The script will create an associative array called "count" and add the value of the second field (number of cases) to the value of the first field (date) each time it appears in the file.
 END {for (date in count) print date, count[date]}: After all lines have been read, the script will iterate through the "count" array and print the date and number of occurrences for each date.
 Note: This is just a general example, you might have to adjust your command based on the format of your data.
 
 awk '{count[$1] += $2} END {for (date in count) print date, count[date]}' data.txt
+
+### bash shell script to insert csv data into sqlite database
+This script assumes that the first line of the CSV file contains the column headers and that the data types of the columns match the types specified in the "CREATE TABLE" statement. 
+Also, this script will insert data in the table named 'data' if table is not present it will create table first.
+
+#!/bin/bash
+
+# specify the CSV file and SQLite database
+csv_file=path/to/data.csv
+db_file=path/to/database.db
+
+# create the table if it does not exist
+sqlite3 $db_file "CREATE TABLE IF NOT EXISTS data (col1 INTEGER, col2 TEXT, col3 REAL);"
+
+# import the data from the CSV file into the table
+sqlite3 -separator , $db_file ".import $csv_file data"
 
 
 ```
