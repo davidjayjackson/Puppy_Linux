@@ -6,7 +6,7 @@ Explanation:
 END {for (date in count) print date, count[date]}: After all lines have been read, the script will iterate through the "count" array and print the date and number of occurrences for each date.
 Note: This is just a general example, you might have to adjust your command based on the format of your data.
 
-awk '{count[$1]++} END {for (date in count) print date, count[date]}' data.txt
+gawk -F"," 'BEGIN{OFS=","}{count[$1]++} END {for (date in count) print date, count[date]}' covid.csv
 
 #### The file contains two columns date and number of cases for that day:
 
@@ -16,7 +16,7 @@ awk '{count[$1]++} END {for (date in count) print date, count[date]}' data.txt
 END {for (date in count) print date, count[date]}: After all lines have been read, the script will iterate through the "count" array and print the date and number of occurrences for each date.
 Note: This is just a general example, you might have to adjust your command based on the format of your data.
 
-awk '{count[$1] += $2} END {for (date in count) print date, count[date]}' data.txt
+awk -F"," 'BEGIN{OFS=","}{count[$2] += $6} END {for (date in count) print date, count[date]}' covid.csv |head
 
 ### bash shell script to insert csv data into sqlite database
 This script assumes that the first line of the CSV file contains the column headers and that the data types of the columns match the types specified in the "CREATE TABLE" statement. 
