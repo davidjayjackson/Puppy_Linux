@@ -34,5 +34,13 @@ sqlite3 $db_file "CREATE TABLE IF NOT EXISTS data (col1 INTEGER, col2 TEXT, col3
 # import the data from the CSV file into the table
 sqlite3 -separator , $db_file ".import $csv_file data"
 
+#### Puppy linux  how do I configure GDM?
 
+To configure GDM (GNOME Display Manager) in Puppy Linux, you will need to edit the GDM configuration file located at /etc/gdm/custom.conf . 
+This file contains various options that can be used to customize the behavior of GDM.
+You can open the file in a text editor by running the command 'sudo nano /etc/gdm/custom.conf'.
+Once you have made your changes, save the file and then restart GDM by 
+
+RUNNNIG 'sudo service gdm restart' or 'sudo systemctl restart gdm' in the terminal.
+Please be careful when making changes to system configuration files, as incorrect changes may cause issues with your system.
 ```
