@@ -25,4 +25,12 @@
 PRAGMA table_info([TABLE_NAME]);
 sqlite> .schema mytable
 
+#### How do alter a column type in SQLite3?
+Note that you can also use other keywords such as RENAME, ADD, 
+and DROP in the ALTER TABLE statement to make other changes to the table structure.
+
+ALTER TABLE table_name MODIFY column_name INTEGER;
+ALTER TABLE table_name CHANGE column_name column_name INTEGER;
+
+
 ```
