@@ -1,0 +1,22 @@
+#### A list of sqlite3 .dot commands/function.
+
+```
+.help - Show this message
+.databases - Show list of databases
+.tables - Show list of tables in the current database
+.schema [table] - Show the CREATE statement for the table
+.exit - Exit this program
+.open [database] - Open a new database
+.mode [mode] - Set output mode (column, list, line, insert)
+.headers [on|off] - Turn display of headers on or off
+.mode insert [table] - Set output mode to "insert" for table
+.log [on|off] - Turn logging on or off
+.backup [database] [file] - Backup a database to a file
+.restore [file] [database] - Restore a database from a file
+.stats [on|off] - Show stats or not
+.timeout [ms] - Try opening locked tables for this many milliseconds
+.vfsinfo - Information about the default VFS.
+.vfsname - Print the name of the VFS stack.
+.dbconfig - List and change sqlite3_db_config() settings.
+.dbstatus - Show the status of all database connections.
+```
