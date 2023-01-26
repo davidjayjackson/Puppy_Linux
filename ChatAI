@@ -43,4 +43,17 @@ Once you have made your changes, save the file and then restart GDM by
 
 RUNNNIG 'sudo service gdm restart' or 'sudo systemctl restart gdm' in the terminal.
 Please be careful when making changes to system configuration files, as incorrect changes may cause issues with your system.
+
+#### Bash script to pull data from sqlite database?
+
+#!/bin/bash
+
+# Assign the results of a query to a variable
+results=$(sqlite3 database.db "SELECT * FROM table;")
+
+# Print the results
+echo "$results"
+
+sqlite3 -header -csv database.db "SELECT * FROM table;" > output.csv
+
 ```
