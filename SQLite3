@@ -19,4 +19,10 @@
 .vfsname - Print the name of the VFS stack.
 .dbconfig - List and change sqlite3_db_config() settings.
 .dbstatus - Show the status of all database connections.
+
+#### How to display the columns names and types on sqlite3?
+
+PRAGMA table_info([TABLE_NAME]);
+sqlite> .schema mytable
+
 ```
