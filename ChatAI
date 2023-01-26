@@ -81,4 +81,10 @@ END {
     }
 }
 
+#### How can I have different windows managers for different users in Puppy Linux
+
+In Puppy Linux, you can use the "xwin" command to start a specific window manager for a specific user.
+For example, to start JWM (Joe's Window Manager) for user "puppy", you would use the command "xwin jwm -user puppy". 
+To start another window manager, such as Openbox, for another user "dog", you would use the command "xwin openbox -user dog". 
+You can also set a default window manager in the file /etc/X11/xinitrc for new users.
 ```
