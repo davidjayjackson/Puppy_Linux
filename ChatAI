@@ -98,6 +98,11 @@ pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -
 * Add the following line to set the font size: font = "xft:monospace:size=12"
 * xmonad --recompile && xmonad --restart
 
+#### In i3 how do I change the font size in the terminal?
+Look for the section where the terminal emulator is defined, which is usually called "bindsym".
+* Add the following line to set the font size: font pango:monospace 12
+* Restart i3 for the changes to take effect: i3-msg restart
+
 
 
 ```
