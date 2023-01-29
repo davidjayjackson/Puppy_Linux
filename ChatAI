@@ -91,4 +91,13 @@ You can also set a default window manager in the file /etc/X11/xinitrc for new u
 ## Update pip installed packages
 pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
 
+#### Xmonad how do I change the font size for the terminal?
+* Look for the config file:
+~/.xmonad/xmonad.hs directory). 
+* Look for the section where the terminal emulator is defined
+* Add the following line to set the font size: font = "xft:monospace:size=12"
+* xmonad --recompile && xmonad --restart
+
+
+
 ```
