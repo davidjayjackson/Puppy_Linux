@@ -103,6 +103,45 @@ Look for the section where the terminal emulator is defined, which is usually ca
 * Add the following line to set the font size: font pango:monospace 12
 * Restart i3 for the changes to take effect: i3-msg restart
 
+## homegrown trim function for awk
+
+#!/usr/bin/awk -f
+
+function trim(s) {
+  sub(/^[ \t]+/, "", s);
+  sub(/[ \t]+$/, "", s);
+  return s;
+}
+
+BEGIN {
+  FS=",";
+}
+
+{
+  for (i=1; i<=NF; i++) {
+    $i = trim($i);
+  }
+  print $0;
+}
+### and here is an solution selecting a column
+
+#!/usr/bin/awk -f
+
+function trim(s) {
+  sub(/^[ \t]+/, "", s);
+  sub(/[ \t]+$/, "", s);
+  return s;
+}
+
+BEGIN {
+  FS=",";
+}
+
+{
+  $1 = trim($1);
+  print $0;
+}
+
 
 
 ```
