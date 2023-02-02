@@ -142,6 +142,10 @@ BEGIN {
   print $0;
 }
 
+### Using sed to remove white spaces at the beginnng and end of a column
+
+sed 's/^[ \t]*//;s/[ \t]*$//' inputfile.txt
+
 
 
 ```
