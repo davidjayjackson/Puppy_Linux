@@ -1,0 +1,1 @@
+gawk '{count[$1]++} END {for (date in count) print date, count[date]}' input_file
