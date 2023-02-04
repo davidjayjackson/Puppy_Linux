@@ -1,0 +1,9 @@
+BEGIN { FS = "," }
+{
+  date_count[$1]++
+}
+END {
+  for (date in date_count) {
+    print date, date_count[date]
+  }
+}
