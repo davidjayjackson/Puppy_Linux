@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+  
+import sys
+import pandas as pd
+import matplotlib.pyplot as plt
+
+file_name = sys.argv[1]
+x_variable = sys.argv[2]
+y_variable = sys.argv[3]
+plot_type = sys.argv[4]
+
+# Read CSV file into a DataFrame
+df = pd.read_csv(file_name)
+
+# Create subplots
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6), sharex=True)
+
+# Plot the X and Y variables in the first subplot
+df.plot(x=x_variable, y=y_variable, kind=plot_type, label=y_variable, ax=ax1)
+ax1.set_ylabel(y_variable)
+ax1.set_title(f"{y_variable} vs {x_variable}")
+ax1.legend()
+
+# Plot the moving average in the second subplot
+df[y_variable].rolling(window=180).mean().plot(label='180-day Moving Average', linestyle='--', color='red', linewidth=2, ax=ax2)
+ax2.set_ylabel('60-day Moving Average')
+ax2.legend()
+
+# Show the plot
+plt.xlabel(x_variable)
+plt.xticks(rotation=45)
+
+# Save plot as a PNG image
+plt.savefig(f"{y_variable}_vs_{x_variable}.png", dpi=300, bbox_inches='tight')
+
