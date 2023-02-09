@@ -1,0 +1,10 @@
+# Calculate and plot moving averages for Opening Stock Prices
+```
+(1) Use python, pandas, and seaborn to write a program that reads csv file form the command line . 
+(2) Prompt for the file name, window1(number) and window2 (number) and the column name. 
+(3) For the columned Open Calculate a moving average based on window1 and window2 column named open. 
+(4) seaborn lineplot the two moving averages.  
+(5) Adds a title that reads “Moving Averages: window1 and window2
+(6) added xlable ="Date" and ylabels = "Opening Price"
+
+```
